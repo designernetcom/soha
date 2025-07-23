@@ -1381,6 +1381,324 @@ progress {
   100% { transform: scale(1); }
 }
 
+/* Reset full height */
+/* body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+} */
+
+/* Section styles */
+.apply-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;  /* Horizontally center */
+  align-items: center;      /* Vertically center */
+  background-color: #f8f9fa; /* Optional background */
+}
+
+/* Heading style */
+.apply-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Label color */
+.heading-color {
+  font-weight: 500;
+  color: #333;
+}
+
+/* Prevent textarea resize */
+textarea.form-control {
+  resize: none;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+}
+
+.contact-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Left Section */
+/* .left-section {
+  width: 55%;
+  background-color: #999a9a;
+  color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.left-section {
+  width: 50%;
+  background-color:  #6f6f6f;
+  color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items to left */
+  justify-content: center; /* Move content to top */
+  gap: 20px; /* Optional: add space between items */
+  font-family: 'Open Sans', sans-serif;
+  height: 100%; 
+}
+
+
+.left-section h6 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.left-section .email-icon {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.social-icons span {
+  font-size: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.left-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Optional: crop image nicely */
+  border-radius: 8px; /* Optional */
+}
+
+
+/* Right Section */
+.right-section {
+  width: 75%;
+  background-color: #fff;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #6f6f6f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #7c7d7d;
+}
+
+
+
+.main-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ==== Left Section ==== */
+.left-section {
+  width: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 480px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subtext {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.employee-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 25px 0 10px;
+}
+
+.employee-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  transition: 0.2s ease;
+}
+
+.option input {
+  margin-top: 6px;
+}
+
+.option:hover {
+  border-color: #2b6ef2;
+  background-color: #eef3fd;
+}
+
+.option .icon {
+  font-size: 20px;
+}
+
+.option strong {
+  display: block;
+  font-size: 14px;
+}
+
+.option p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 2px;
+}
+
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background-color: #2b6ef2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1e4ed8;
+}
+
+/* ==== Right Section ==== */
+.right-section {
+  width: 50%;
+  /* background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fbusiness-woman-on-phone-call&psig=AOvVaw1sSfssLGKPt_uTKmELkHFR&ust=1753345356299000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKCsh9DG0o4DFQAAAAAdAAAAABA8https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fbusiness-woman-on-phone-call&psig=AOvVaw1sSfssLGKPt_uTKmELkHFR&ust=1753345356299000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKCsh9DG0o4DFQAAAAAdAAAAABA8'); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.testimonial {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  color: #fff;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.company {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
 
 
 
