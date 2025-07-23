@@ -874,6 +874,7 @@ progress {
 }
 
 .ev-points {
+  color: white;
   list-style: none;
   padding: 0;
   margin-top: 20px;
@@ -1034,21 +1035,18 @@ progress {
 
 
 /* Section Layout */
+/* Section Layout */
 .ev-info-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
   padding: 40px 20px;
   background: #f8f8f8;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.ev-info-section h6 {
-  color: rgb(84, 81, 81);
-}
-
-
+/* Box Design */
 .ev-box {
   flex: 1 1 400px;
   background-color: #ffffff;
@@ -1056,43 +1054,37 @@ progress {
   padding: 25px 30px;
   box-shadow: 0 4px 15px rgba(151, 56, 56, 0.1);
   min-width: 320px;
-  opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  opacity: 1;
+  position: relative; /* important for wobble */
 }
 
-/* Slide in from Left */
+/* Keyframes for light side-to-side motion */
+@keyframes wobbleLeft {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes wobbleRight {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(5px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply Wobble Animation */
 .slide-left {
-  animation-name: slideInLeft;
+  animation: wobbleLeft 2s ease-in-out infinite;
 }
 
-/* Slide in from Right */
 .slide-right {
-  animation-name: slideInRight;
+  animation: wobbleRight 2s ease-in-out infinite;
 }
 
-/* Keyframes for animations */
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 
 
 /* Main Layout */
@@ -1327,7 +1319,7 @@ progress {
   /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px;
   font-family: 'Segoe UI', sans-serif;
   border-radius: 15px;
 }
@@ -1395,6 +1387,7 @@ progress {
   justify-content: center;  /* Horizontally center */
   align-items: center;      /* Vertically center */
   background-color: #f8f9fa; /* Optional background */
+  padding: 10px 5px;
 }
 
 /* Heading style */
@@ -1448,7 +1441,7 @@ body {
   width: 50%;
   background-color:  #6f6f6f;
   color: #fff;
-  padding: 60px 40px;
+  /* padding: 60px 40px; */
   display: flex;
   flex-direction: column;
   align-items: center; /* Align items to left */
@@ -1456,6 +1449,11 @@ body {
   gap: 20px; /* Optional: add space between items */
   font-family: 'Open Sans', sans-serif;
   height: 100%; 
+   flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
 }
 
 
@@ -1502,6 +1500,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 6px;
 }
 
 .contact-form input,
@@ -1545,8 +1544,10 @@ body {
 
 .main-container {
   display: flex;
-  width: 100%;
-  height: 100vh;
+  flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+  padding: 20px;
 }
 
 /* ==== Left Section ==== */
@@ -1557,16 +1558,29 @@ body {
   align-items: center;
   justify-content: center;
   padding: 40px;
+   flex: 1;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .contact-form {
   width: 100%;
   max-width: 480px;
+   /* background: #f5f5f5; */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .contact-form h2 {
   font-size: 24px;
   margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
 }
 
 .subtext {
@@ -1578,6 +1592,11 @@ body {
 .name-fields {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+}
+
+.name-fields input {
+  flex: 1;
 }
 
 input[type="text"],
@@ -1667,6 +1686,10 @@ button:hover {
   align-items: center;
   padding: 40px;
   color: white;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  justify-content: center;
 }
 
 .testimonial {
@@ -1698,6 +1721,19 @@ button:hover {
   font-size: 13px;
   opacity: 0.8;
 }
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
 
 
