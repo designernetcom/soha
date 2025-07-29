@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>EVRobotics Skill Coach (India) Pvt. Ltd </title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="StackBros">
+	<meta name="description" content="EVRobotics Skill Coach (India) Pvt. Ltd">
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+			var el = document.querySelector('.theme-icon-active');
+			if (el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+					const activeThemeIcon = document.querySelector('.theme-icon-active use')
+					const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+					const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+					document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+						element.classList.remove('active')
+					})
+
+					btnToActive.classList.add('active')
+					activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+				}
+
+				window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+					if (storedTheme !== 'light' || storedTheme !== 'dark') {
+						setTheme(getPreferredTheme())
+					}
+				})
+
+				showActiveTheme(getPreferredTheme())
+
+				document.querySelectorAll('[data-bs-theme-value]')
+					.forEach(toggle => {
+						toggle.addEventListener('click', () => {
+							const theme = toggle.getAttribute('data-bs-theme-value')
+							localStorage.setItem('theme', theme)
+							setTheme(theme)
+							showActiveTheme(theme)
+						})
+					})
+
+			}
+		})
+
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap"
+		rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+<style>
+    /* Existing styles here */
+
+    .ev-package {
+      width: 100%;  /* full width */
+      margin: 0 auto;
+      padding: 40px 20px;
+      border-radius: 16px;
+      background: url('https://ethanolfacts.eu/uploads/2018/09/Fact-Page-Image-1530px_490px-03.jpg') right center / cover no-repeat;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 1s ease-in-out;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Other styles */
+  </style>
+
+
+</head>
+
+<body>
+
+	<!-- Header START -->
+	<header class="header-sticky header-absolute" style="background-color:#fff;">
+		<!-- Nav START -->
+		<nav class="navbar navbar-expand-xl">
+			<div class="container">
+				<!-- Logo START -->
+				<a class="navbar-brand me-0" href="index.html">
+					<img class="light-mode-item navbar-brand-item" src="assets/images/logo/soho-logo.png" alt="logo">
+					<img class="dark-mode-item navbar-brand-item" src="assets/images/logo/soho-logo.png" alt="logo">
+				</a>
+				<!-- Logo END -->
+
+				<!-- Main navbar START -->
+				<div class="navbar-collapse collapse" id="navbarCollapse">
+					<ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown">
+							<a class="nav-link " href="index.html">Home</a>
+
+						</li>
+
+						<li class="nav-item ">
+							<a class="nav-link " href="about.html">About Us</a>
+
+						</li>
+
+
+						<!-- Nav item -->
+						<li class="nav-item dropdown dropdown-fullwidth">
+							<a class="nav-link  " href="course.html">Courses</a>
+
+						</li>
+						<!-- Nav item -->
+						<li class="nav-item dropdown dropdown-fullwidth">
+							<a class="nav-link " href="training.html">Training</a>
+
+						</li>
+						<!-- Nav item -->
+						<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link active " href="evlab.html"   >EV Lab</a>
+								
+								</li>
+						<li class="nav-item dropdown dropdown-fullwidth">
+							<a class="nav-link " href="faq.html">FAQ</a>
+
+						</li>
+						<li class="nav-item dropdown dropdown-fullwidth">
+							<a class="nav-link " href="gallery.html">Gallery</a>
+
+						</li>
+
+
+
+						<!-- Nav item -->
+						<li class="nav-item"> <a class="nav-link" href="contact.html">Contact us</a> </li>
+					</ul>
+				</div>
+				<!-- Main navbar END -->
+				<!-- Buttons -->
+				<ul class="nav align-items-center dropdown-hover ms-sm-2">
+
+
+					<!-- Dark mode option END -->
+					<li class="nav-item">
+						<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-animation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</button>
+					</li>
+				</ul>
+
+
+			</div>
+		</nav>
+		<!-- Nav END -->
+	</header>
+	<!-- Header END -->
+
+	<!-- **************** MAIN CONTENT START **************** -->
+	<main>
+
+		<!-- =======================
+Main hero START -->
+		<section class="pt-lg-8">
+			<div class="container pt-4 pt-lg-0">
+				<!-- Breadcrumb & title -->
+				<div class="row align-items-center mb-7">
+						<div class="col-xl-12">
+								<!-- <h4 class="text-center">Electric Vehicle (EV) Lab Set-Up</h4> -->
+								
+								<!-- Image centered below heading -->
+    						<div class="text-center mt-4" style="margin-left: -210px; padding-left: -50%;">
+  										<img src="assets/images/GALLERY/G 27.jpg" alt="EV Lab Image" class="img-fluid" style="width: 200%; max-width: 120%; height: 500px; display: block;">
+ 								<div style="position: absolute; top: 230px; left: 120px; width: 50%; color: white; z-index: 10;">
+          							<h4 style="color: white; font-size: xxx-large;">Electric Vehicle (EV) Lab Set-Up</h4><br>
+											<p>
+												In alignment with India’s vision for green mobility, this proposal outlines the establishment of a state-of-the-art Electric Vehicle (EV) Lab in your institution. The initiative aims to provide real-time, industry-ready training to students and faculty, and to bridge the gap between theoretical knowledge and hands-on implementation.
+											</p>
+       							 </div>
+							</div>
+
+ 						 </div>
+				</div>
+
+			</div>
+		</section>
+	
+
+
+		<style>
+			.ev-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.ev-image {
+  position: relative;
+  flex: 1 1 45%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ev-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.ev-image-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.ev-text {
+  flex: 1 1 50%;
+  max-width: 600px;
+}
+
+.ev-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.ev-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.ev-text ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.ev-text ul li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  .ev-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .ev-image,
+  .ev-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .ev-image-text {
+    font-size: 20px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .ev-text h2 {
+    font-size: 22px;
+  }
+
+  .ev-text p,
+  .ev-text ul li {
+    font-size: 14px;
+  }
+}
+
+/* @media (max-width: 480px) {
+  .ev-image-text {
+    font-size: 16px;
+    bottom: 5px;
+    left: 8px;
+  }
+
+  .ev-text h2 {
+    font-size: 20px;
+  }
+
+  .ev-text p,
+  .ev-text ul li {
+    font-size: 13px;
+  }
+} */
+@media (max-width: 768px) {
+  .pt-lg-8 {
+    padding-top: 2rem !important;
+  }
+
+  .text-center.mt-4 {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    position: relative;
+  }
+
+.text-center.mt-4 img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  display: block;
+}
+
+
+ .text-center.mt-4 div {
+    position: static !important;
+    width: 100% !important;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    margin-top: -60px;
+  }
+
+
+  .text-center.mt-4 div h4 {
+    font-size: 22px !important;
+  }
+
+  .text-center.mt-4 div p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .ev-package {
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    min-height: 400px; /* ya jitni zarurat ho utni height */
+  }
+}
+
+		</style>
+
+<div class="ev-section">
+  <div class="ev-image">
+    <img src="assets/images/GALLERY/G 29.jpg" alt="EV Lab" />
+    <div class="ev-image-text">Electric Vehicle Course</div>
+  </div>
+  <div class="ev-text">
+    <h2>Electric Vehicle Design & Development</h2>
+    <p>
+      EVRobotics Skill Coach (India) Pvt. Ltd. brings over a decade of experience in electric vehicle training, certification, and industry-aligned lab setups across India.
+      We offer a modular lab solution, compatible with AICTE funding and self-funding programs like:
+    </p>
+    <ul>
+      <li>MODROB – Modernization and Removal of Obsolescence</li>
+      <li>RPS – Research Promotion Scheme</li>
+      <li>ATAL FDPs – AICTE Training and Learning Programs</li>
+      <li>Skill Coach labs – Company funded with Six-month EV courses.</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<style>
+.ev-package {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  border-radius: 16px;
+  background: url('https://ethanolfacts.eu/uploads/2018/09/Fact-Page-Image-1530px_490px-03.jpg') center/cover no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease-in-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+  .ev-package::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 0;
+  }
+
+  .ev-header, .ev-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .ev-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .ev-header h2 {
+    font-size: 35px;
+    color: #003366;
+    animation: slideDown 1s ease;
+  }
+
+  .ev-header p {
+    font-size: 16px;
+    color: #111;
+    margin: 8px 0;
+  }
+
+  .ev-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .ev-card {
+    flex: 1 1 45%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.4s ease;
+    border-left: 6px solid #004080;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+  }
+
+  .ev-card h3 {
+    font-size: 35px;
+    color: #004080;
+    margin-bottom: 15px;
+  }
+
+  .ev-card p {
+    font-size: 35px;
+    margin-bottom: 12px;
+    color: #222;
+  }
+
+  .ev-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 64, 128, 0.2);
+  }
+
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(60px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .ev-card {
+      flex: 1 1 100%;
+    }
+
+    .ev-header h2 {
+      font-size: 24px;
+    }
+  }
+  .table-wrapper {
+  overflow-x: auto;
+}
+
+.ev-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 17px;
+  color: #333;
+}
+
+.ev-table th,
+.ev-table td {
+  padding: 12px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.638);
+}
+
+.ev-table th {
+  background-color: #004080;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .ev-table th,
+  .ev-table td {
+    font-size: 14px;
+  }
+}
+
+
+</style>
+
+<section>
+  <div class="ev-package">
+    <div class="ev-header">
+      <h2>Starter EV Lab Package</h2>
+      <p>Focus: <strong>2-Wheeler Hands-On EV System</strong></p>
+      <p>Ideal for: <strong>Diploma/ITI/Engineering colleges starting EV programs</strong></p>
+      <p>Fundable under: <strong>MODROB (₹2–3 Lakh)</strong> and <strong>Skill Coach with six-month integrated EV course</strong></p>
+    </div>
+
+   <div class="ev-card" style="flex: 1 1 100%;">
+  <!-- <h3>Component & Details</h3> -->
+  <div class="table-wrapper">
+    <table class="ev-table">
+      <thead>
+        <tr>
+          <th>Component</th>
+          <th>Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2W EV Training Kit</td>
+          <td>Hub motor, controller, BMS battery pack, chassis setup</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>Mustimeter, tester, safety gear</td>
+        </tr>
+        <tr>
+          <td>Printed Study Material</td>
+          <td>Theory + practical exercises</td>
+        </tr>
+        <tr>
+          <td>Online Doubt Clearing</td>
+          <td>Weekly live sessions for 3 months</td>
+        </tr>
+        <tr>
+          <td>Faculty Training</td>
+          <td>3-Day hands-on (online/onsite)</td>
+        </tr>
+        <tr>
+          <td>Student Certification</td>
+          <td>25 students (Skill Coach Certified)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+
+
+
+<style>
+	.ev-table-image-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 15px auto;
+  max-width: 1200px;
+  animation: fadeInUp 1s ease;
+}
+
+.ev-table-container {
+  flex: 1 1 550px;
+  /* animation: sway 4s ease-in-out infinite; */
+}
+
+.table-title {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.table-wrapper {
+  display: table;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.table-row {
+  display: table-row;
+  transition: background 0.3s ease;
+}
+
+.table-head {
+  background: rgba(0, 51, 102, 0.8);
+  color: #fff;
+  font-weight: bold;
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  vertical-align: middle;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+}
+
+.table-row:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.ev-image-container {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* animation: sway 4s ease-in-out infinite; */
+}
+
+.ev-lab-img {
+  width: 95%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ev-table-image-wrap {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .table-title {
+    text-align: center;
+  }
+}
+@keyframes sway {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(0); }
+  75% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+</style>
+<section>
+	<div class="ev-header">
+  <h2>Standard EV Lab Package</h2>
+  <p>Focus: <strong>Dual-Platform Learning – 2W + 4W EV</strong></p>
+  <p>Ideal for: <strong>Engineering Colleges (EEE, Mech, Auto)</strong></p>
+  <p>Fundable under: <strong>MODROB (₹5–6 Lakh)</strong> and <strong>Skill Coach with six-month integrated EV course</strong></p>
+</div>
+
+	<div class="ev-table-image-wrap">
+  <div class="ev-table-container">
+    <h3 class="table-title">Component & Details</h3>
+    <div class="table-wrapper">
+      <div class="table-row table-head">
+        <div class="table-cell" style="color: white;">Component</div>
+        <div class="table-cell" style="color: white;">Details</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Includes Starter Kit</div>
+        <div class="table-cell">Yes</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">4W Powertrain Kit</div>
+        <div class="table-cell">BLDC/AC Motor, HV controller, simulated battery</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">CAN Dashboard (basic)</div>
+        <div class="table-cell">Speed, voltage, temp display</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Extended Tools</div>
+        <div class="table-cell">Load testers, sensors</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Faculty Training</div>
+        <div class="table-cell">5-Day program</div>
+      </div>
+      <div class="table-row">
+        <div class="table-cell">Student Certification</div>
+        <div class="table-cell">50 students</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ev-image-container">
+    <img src="assets/images/GALLERY/G 28.jpeg" alt="EV Lab" class="ev-lab-img" />
+  </div>
+</div>
+</section>
+
+
+
+
+<style>
+.premium-ev-section {
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.premium-ev-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://cdn.pixabay.com/photo/2020/05/18/08/53/banner-5185284_1280.jpg') no-repeat center center;
+  background-size: cover;
+  filter: blur(3px);
+  z-index: 0;
+  transform: scale(1.05); /* prevent edge cropping */
+  opacity: 0.9;
+}
+
+.premium-ev-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.127);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: auto;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.premium-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.premium-ev-card p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.premium-ev-card span {
+  font-weight: bold;
+  color: black;
+}
+</style>
+
+<section class="premium-ev-section">
+  <div class="premium-ev-card">
+    <h2 class="premium-title">Premium EV Lab Package</h2>
+    <p class="premium-focus">
+      <span>Focus:</span> Hardware + Software Integration (Advanced)
+    </p>
+    <p class="premium-ideal">
+      <span>Ideal for:</span> NAAC A/A+ Colleges, R&D centers
+    </p>
+    <p class="premium-funding">
+      <span>Fundable under:</span> ₹9,00,000 – ₹12,00,000 (RPS / Institutional Innovation Grants)
+    </p>
+  </div>
+</section>
+
+
+
+
+
+<style>
+.ev-inclusions-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  gap: 70px;
+  position: relative;
+  background: #f0f4f8;
+  flex-wrap: wrap;
+}
+
+.side-img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.left-img {
+  animation-delay: 0.3s;
+}
+
+.right-img {
+  animation-delay: 0.6s;
+}
+
+.ev-inclusions-table {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  width: 100%;
+  overflow-x: auto;
+  animation: slideIn 1s ease forwards;
+}
+
+.ev-inclusions-table h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.ev-inclusions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+  font-size: 16px;
+  animation: fadeUp 1.5s ease;
+  text-align: center;
+}
+
+.ev-inclusions-table th,
+.ev-inclusions-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ev-inclusions-table th {
+  background-color: rgba(0, 51, 102, 0.1);
+  color: #003366;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ev-inclusions-section {
+    flex-direction: column;
+  }
+
+  .side-img {
+    width: 400px;
+  }
+
+  .ev-inclusions-table {
+    padding: 20px;
+  }
+
+  .ev-inclusions-table table {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+
+<section class="ev-inclusions-section">
+  <img src="./assets/images/GALLERY/G 30.jpeg" alt="EV Left" class="side-img left-img">
+  <div class="ev-inclusions-table">
+    <h2>: Inclusions :</h2>
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>All Hardware Kits</td>
+        <td>2W + 4W with complete tools</td>
+      </tr>
+      <tr>
+        <td>Software Training</td>
+        <td>MATLAB, SolidWorks, AutoCAD (Training Only, No License)</td>
+      </tr>
+      <tr>
+        <td>Simulation Projects</td>
+        <td>EV drivetrain design, BMS, motor control</td>
+      </tr>
+      <tr>
+        <td>Faculty Training</td>
+        <td>10-Day (hardware + software alignment)</td>
+      </tr>
+      <tr>
+        <td>Student Certification</td>
+        <td>75 students</td>
+      </tr>
+      <tr>
+        <td>Project Mentorship</td>
+        <td>3 Final year projects supported</td>
+      </tr>
+    </table>
+  </div>
+  <img src="./assets/images/GALLERY/G 31.jpeg" alt="EV Right" class="side-img right-img">
+</section>
+
+
+<style>
+.ev-value-section {
+  padding: 40px 20px;
+ background: 
+			url('https://www.transparenttextures.com/patterns/cubes.png'),
+			linear-gradient(to right, #3b434b, #8ea2b3); /* darker base gradient */
+		background-blend-mode: overlay;
+		background-size: 200px;
+  text-align: center;
+  text-align: center;
+  background-size: contain, cover;
+  background-repeat: repeat, no-repeat;
+}
+
+.ev-value-section h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.ev-value-table {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+.ev-value-table th,
+.ev-value-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ev-value-table th {
+  background-color: #1e354ca2;
+  color: #fff;
+  font-weight: bold;
+  animation: blinkText 2s infinite;
+}
+
+/* Blink animation */
+@keyframes blinkText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ev-value-table {
+    font-size: 14px;
+  }
+
+  .ev-value-section h2 {
+    font-size: 22px;
+  }
+}
+</style>
+
+<section class="ev-value-section">
+  <h2 class="blink">Value to the College & Outcomes</h2>
+  <table class="ev-value-table">
+    <tr>
+      <th>Area</th>
+      <th>Benefit</th>
+    </tr>
+    <tr>
+      <td>Academic</td>
+      <td class="blink">Skill-based EV exposure</td>
+    </tr>
+    <tr>
+      <td>Research</td>
+      <td>Eligible for MODROB / RPS / AICTE grants</td>
+    </tr>
+    <tr>
+      <td>Industry</td>
+      <td class="blink">Certification + internship support</td>
+    </tr>
+    <tr>
+      <td>NAAC/NBA</td>
+      <td>Boosts “Infrastructure” and “Student Outcome” scores</td>
+    </tr>
+    <tr>
+      <td>Faculty</td>
+      <td class="blink">Trained in next-gen mobility systems</td>
+    </tr>
+    <tr>
+      <td>Branding</td>
+      <td>Skill Coach Certified Lab recognition</td>
+    </tr>
+  </table>
+</section>
+
+
+
+
+<section class="tangible-outcomes">
+  <h2 style="color: whitesmoke;">Tangible Outcomes</h2><br>
+  <div class="jump-circle-container">
+    <div class="jump-circle" style="animation-delay: 0s; background-color: rgba(255, 255, 255, 0.6);">
+      <p>50–75 students<br>certified per year</p>
+    </div>
+    <div class="jump-circle" style="animation-delay: 0.3s; background-color: rgba(255, 255, 255, 0.6);">
+      <p>2+ final-year<br>projects annually</p>
+    </div>
+    <div class="jump-circle" style="animation-delay: 0.6s; background-color: rgba(255, 255, 255, 0.6);">
+      <p>Eligibility for<br>FDP hosting</p>
+    </div>
+    <div class="jump-circle" style="animation-delay: 0.9s; background-color: rgba(255, 255, 255, 0.6);">
+      <p>R&D publication<br>& patent groundwork</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.tangible-outcomes {
+  padding: 50px 20px;
+  background: url('./assets/images/GALLERY/G\ 33.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  color: #003366;
+}
+
+.tangible-outcomes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(255, 255, 255, 0.6); */
+   /* Optional: makes text more readable */
+  z-index: 1;
+}
+
+.tangible-outcomes h2,
+.jump-circle-container {
+  position: relative;
+  z-index: 2;
+}
+
+.jump-circle-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.jump-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  /* background: rgba(255, 255, 255, 0.3); */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  animation: jump 1.5s ease-in-out infinite;
+  backdrop-filter: blur(0); /* Removed blur */
+  position: relative;
+  z-index: 2;
+}
+
+.jump-circle p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .jump-circle {
+    width: 130px;
+    height: 130px;
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+	<!-- =======================Main hero END -->
+	</main>
+	<!-- **************** MAIN CONTENT END **************** -->
+
+	<!-- =======================
+Footer START -->
+<!-- <style>
+	body {
+		background: 
+			/* linear-gradient(rgba(98, 72, 72, 0.6), rgba(196, 106, 106, 0.6)),  */
+			url('https://www.transparenttextures.com/patterns/cubes.png'),
+			linear-gradient(to right, #e1e4ffae, #84929f); /* darker base gradient */
+		/* background-blend-mode: overlay;
+		background-size: auto, contain, cover;
+		background-repeat: repeat, repeat, no-repeat;
+		background-attachment: fixed; */
+		color: #ffffff;
+	}
+</style> -->
+
+	<footer class="">
+		<div class="container position-relative mt-sm-5">
+
+
+
+			<!-- Divider -->
+			<hr class="my-5">
+
+			<!-- Footer Widgets -->
+			<div class="row g-4 justify-content-between">
+				<!-- Widget 2 START -->
+				<div class="col-lg-3">
+
+					<div class="row g-2 mb-4 mb-sm-5">
+
+						<div class="col-6 col-sm-4 col-md-3 col-lg-6">
+							<a href="#"> <img src="assets/images/logo/soho-logo.png" alt=""> </a>
+						</div>
+
+					</div>
+
+					<!-- Social buttons -->
+					<h6 class="mb-2 mb-md-4">Follow on</h6>
+
+					<ul class="list-inline mb-0 mt-3">
+						<li class="list-inline-item"> <a class="btn btn-xs btn-icon " href="#"><img
+									src="assets/images/whatsapp.png" height="30px" /></a> </li>
+						<li class="list-inline-item"> <a class="btn btn-xs btn-icon" href="#"><img
+									src="assets/images/insta.png" height="30px" /></a> </li>
+						<li class="list-inline-item"> <a class="btn btn-xs btn-icon " href="#"><img
+									src="assets/images/facebook.png" height="30px" /></a> </li>
+						<li class="list-inline-item"> <a class="btn btn-xs btn-icon " href="#"><img
+									src="assets/images/linkedin.png" height="30px" /></a> </li>
+
+					</ul>
+				</div>
+				<!-- Widget 2 END -->
+				<!-- Widget 1 START -->
+				<div class="col-lg-9 col-xl-9">
+					<div class="row g-4">
+						<!-- Link block -->
+						<div class="col-4 col-md-2">
+							<h6 class="mb-2 mb-md-4" style="font-size: 17px;">Links</h6>
+							<ul class="nav flex-column">
+								<li class="nav-item"><a class="nav-link" href="./home.html">Home </a></li>
+								<li class="nav-item"><a class="nav-link" href="./about.html">About us</a></li>
+								<li class="nav-item"><a class="nav-link" href="./training.html">Training</a></li>
+								<li class="nav-item"><a class="nav-link" href="./evlab.html">EV Lab</a></li>
+								<li class="nav-item"><a class="nav-link" href="./faq.html">FAQ</a></li>
+								<li class="nav-item"><a class="nav-link" href="./course.html">Courses </a></li>
+
+								<li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+
+								<li class="nav-item"><a class="nav-link" href="./contact.html">Contact us</a></li>
+
+							</ul>
+						</div>
+
+						<!-- Link block -->
+						<div class="col-8 col-md-4">
+							<h6 class="mb-2 mb-md-4" style="font-size: 17px;">Our Services</h6>
+							<ul class="nav flex-column">
+								<li class="nav-item"><a class="nav-link pt-0" href="./course.html">Electric Vehicles
+										(EV)</a></li>
+								<li class="nav-item"><a class="nav-link" href="./course.html">Industrial Automation</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="./course.html">Robotics</a></li>
+								<li class="nav-item"><a class="nav-link" href="./course.html">Design & Manufacturing
+										Tools</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="./course.html">Artificial Intelligence &
+										Machine
+										Learning</a></li>
+
+
+							</ul>
+						</div>
+
+						<!-- Link block -->
+						<div class="col-md-3">
+							<h6 class="mb-2 mb-md-4" style="font-size: 17px;">Mumbai Address</h6>
+							<ul class="list-group list-group-borderless">
+								<li class="d-flex mb-3" style="font-size: 16px; text-align: justify;"><i
+										class="bi bi-geo-alt" style=" color: #ff0000e0"></i>
+									&nbsp;Shop No.116, Lodha shopping center, Lodha Casa Rio Gold Rd, above Unity Bank,
+									Maduban Society, Dombivli East, Nilje Gaon, Maharashtra 421204 <br>
+								</li>
+								<li class="d-flex mb-3" style="font-size: 16px; text-align: justify;"><i
+										class="bi bi-telephone" style=" color: #ff0000e3"></i>
+									&nbsp;- 9990634057<br>
+								</li>
+
+
+
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h6 class="mb-2 mb-md-4" style="font-size: 17px;">Pune Address</h6>
+							<ul class="list-group list-group-borderless">
+								<li class="d-flex mb-3" style="font-size: 16px; text-align: justify;"><i
+										class="bi bi-geo-alt" style=" color: #ff0000e3"></i>
+									&nbsp; MIT ,WPU Department of Polytechnic
+									Vishwashanti Marg, Rambaug Colony, Kothrud, Pune, Maharashtra 411038 <br>
+								</li>
+
+								<li class="d-flex mb-3" style="font-size: 16px; text-align: justify;"><i
+										class="bi bi-telephone" style=" color: #ff0000e3"></i>
+									&nbsp;- 9137419684<br>
+								</li>
+
+							</ul>
+
+
+						</div>
+					</div>
+				</div>
+				<!-- Widget 1 END -->
+
+
+			</div>
+
+			<!-- Divider -->
+			<hr class="mt-4 mb-3">
+
+			<!-- Bottom footer -->
+			<div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-3">
+
+
+				<!-- Copyright link-->
+				<div class="text-body mt-3 mt-md-0"> Copyrights ©2025 EVRobotics Skill Coach (India) Pvt. Ltd. Design by
+					<a href="https://www.netcom-india.com/" class="text-body text-primary-hover">Netcom Business
+						Solutions Pvt Ltd</a>.
+				</div>
+				<!-- Copyright link-->
+			</div>
+		</div>
+	</footer>
+	<!-- =======================
+Footer END -->
+
+	<!-- Back to top -->
+	<div class="back-top"></div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Theme Functions -->
+	<script src="assets/js/functions.js"></script>
+
+</body>
+
+</html>
