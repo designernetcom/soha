@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>EVRobotics Skill Coach (India) Pvt. Ltd </title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="StackBros">
+	<meta name="description" content="EVRobotics Skill Coach (India) Pvt. Ltd">
+
+	<!-- Dark mode -->
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+ 
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+
+		setTheme(getPreferredTheme())
+
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+
+			showActiveTheme(getPreferredTheme())
+
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+
+			}
+		})
+		
+	</script>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/swiper/swiper-bundle.min.css">
+	
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Header START -->
+<header class="header-sticky header-absolute" style="background-color:#fff;">
+	<!-- Nav START -->
+	<nav class="navbar navbar-expand-xl">
+		<div class="container">
+			<!-- Logo START -->
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="assets/images/logo/soho-logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo/soho-logo.png" alt="logo">
+			</a>
+			<!-- Logo END -->
+
+			<!-- Main navbar START -->
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll dropdown-hover mx-auto">
+
+					<!-- Nav item -->
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="index.html"   >Home</a>
+						
+					</li>
+
+                   <li class="nav-item dropdown dropdown-fullwidth">
+						<a class="nav-link " href="about.html" >About us</a>
+					
+					</li>
+						
+					</li>
+
+
+					<!-- Nav item -->
+					<li class="nav-item dropdown dropdown-fullwidth">
+						<a class="nav-link " href="course.html" >Courses</a>
+					
+					</li>
+							<!-- Nav item -->
+							<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link dropdown-toggle active" href="" 
+      									 id="trainingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+       										 Training</a>
+
+								<ul class="dropdown-menu" aria-labelledby="trainingDropdown">
+									<li><a class="dropdown-item" href="ev-course-in-pune.html">EV Course in PUNE</a></li>
+									<li><a class="dropdown-item" href="ev-course-in-mumbai.html">EV Course in MUMBAI</a></li>
+								</ul>
+							</li>
+
+								<!-- Nav item -->
+								<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link " href="evlab.html" >EV Lab</a>
+								
+								</li>
+								<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link " href="faq.html">FAQ</a>
+								
+								</li>
+								<li class="nav-item dropdown dropdown-fullwidth">
+									<a class="nav-link " href="gallery.html">Gallery</a>
+								
+								</li>
+
+					<!-- Nav item -->
+				<li class="nav-item dropdown dropdown-fullwidth">
+						<a class="nav-link " href="contact.html" >Contact us</a>
+					
+					</li>
+			</div>
+           
+			<!-- Main navbar END -->
+       			<!-- Buttons -->
+			<ul class="nav align-items-center dropdown-hover ms-sm-2">
+	
+	
+				<!-- Dark mode option END -->
+				<li class="nav-item">
+					<button class="navbar-toggler ms-sm-3 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-animation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</button>
+				</li>	
+			</ul>
+	
+
+		</div>
+	</nav>
+	<!-- Nav END -->
+</header>
+<!-- Header END -->
+
+<!-- **************** MAIN CONTENT START **************** -->
+<main>
+
+<!-- =======================
+Main Banner START -->
+
+<section class="" style="padding-top: 100px; padding-bottom: 30px;">
+	<div class="container">
+		<div class="row g-4 align-items-center">
+
+        
+             <div class="row align-items-center mb-7">
+					<div class="col-xl-12">
+
+</div>
+
+
+
+				</div>
+
+
+
+<section class="training-section py-0 mt-0">
+  <div class="container-fluid">
+    <div class="row align-items-center no-gutters">
+
+      <!-- Image Column -->
+      <div class="col-lg-6 position-relative p-0 image-up">
+  <img src="assets/images/GALLERY/mumbai.png" class="img-fluid w-100 h-100 rounded-0" alt="about-img">
+</div>
+
+
+      <!-- Text Column -->
+      <div class="col-lg-6 ps-md-5 pt-4 pt-lg-0">
+        <div class="row align-items-center h-100">
+          <div class="col-xl-12">
+            <h4 class="my-4" style="font-size: 25px;"> 
+  Electric Vehicle Training Course in Mumbai <br> Basic to Advanced EV Programs | World-Class E-Mobility Centre of Excellence
+</h4>
+            <p>EVRobotics Skill Coach (India) Pvt. Ltd., in association with Don Bosco ITI, Mumbai, offers one of India’s 
+                most advanced and comprehensive <b>Electric Vehicle training programs in Mumbai</b> under its <b>E-Mobility Centre of 
+                Excellence</b>. This centre is not limited to basic EV courses-it delivers <b>complete Electric Vehicle education 
+                from foundation level to advanced industry-specialist training, supported by a world-class EV lab and expert 
+                trainers</b>.</p>
+            <p class="my-4">Our programs start with core skill development through the <b>Electric Vehicle Technician Course, 
+                EV Battery Course, and BMS Course</b>, and progress to <b>advanced Electric Vehicle courses</b> designed for high-end 
+                industry requirements. These include <b>Advanced EV Diagnostics & CAN Protocol (2W/3W/4W), Advanced EV Battery 
+                Testing & Thermal Management, ADAS Testing & Calibration, EV Powertrain & Motor Controller Training, and EV 
+                Charging Systems & Infrastructure</b>.</p> 
+
+            <p class="my-4">Students train in a <b>state-of-the-art EV</b> lab equipped with live electric vehicles, ADAS testing modules,
+                 CAN communication setups, battery pack and BMS testing units, motor-controller panels, and EV charging systems. 
+                 Training is delivered by <b>India’s leading EV trainers</b>, ensuring deep practical exposure and real-world industry
+                  readiness.</p>
+
+            <p class="my-4">If you are looking for the <b>best Electric Vehicle course in Mumbai, advanced EV training, battery 
+                course in Mumbai</b>, or <b>BMS and CAN-based EV programs</b>, EVRobotics Skill Coach provides a complete learning 
+                pathway-from beginner to advanced EV specialist and EV entrepreneur.</p>
+		</div>
+        </div>
+      
+ 
+				
+
+
+			</div>
+		</div>
+		</div>
+		</div>
+
+    </div>
+		 </div>
+</section> <!-- Row END -->
+
+
+	</div>
+</section>
+
+
+
+<section class="ev-course-highlights" 
+>
+  <div class="ev-sticker-wrapper">
+
+  
+
+    <!-- Main Content -->
+    <div class="ev-content">
+      <h2 class="section-title">Why Choose This Electric Vehicle Course in Mumbai?</h2>
+      <ul class="ev-points" style="text-align: left;">
+        <li>India’s first world class lab-based E-Mobility Centre of Excellence</li>
+        <li>Training conducted by India’s top EV Skill Coaches</li>
+        <li>100% practical EV learning with live vehicle systems</li>
+        <li>Advanced EV Battery & BMS Lab</li>
+        <li>Industry-aligned EV curriculum</li>
+        <li>Designed for real EV jobs & EV entrepreneurship</li>
+       
+      </ul>
+    </div>
+
+   
+
+  </div>
+</section>
+
+<style>
+	.ev-course-highlights {
+  position: relative;
+  background-image: url("assets/images/GALLERY/G 25.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black; /* or white depending on your content */
+}
+
+.ev-course-highlights::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 16, 16, 0.584); /* white overlay, adjust opacity */
+  z-index: 1;
+}
+
+.ev-course-highlights .ev-sticker-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+</style>
+
+
+<section class="ev-training">
+  <div class="content">
+    <h2 class="section-ttl">EV Courses Offered in Mumbai</h2>
+    <p class="section-subtitle">
+      Industry-focused Electric Vehicle training with hands-on practical exposure
+    </p>
+
+    <div class="course-grid">
+      <!-- Course 1 -->
+      <div class="course-card">
+        <img src="assets/images/GALLERY/training1.jpeg" alt="EV Technician Course">
+        <h3>Electric Vehicle Technician Course</h3>
+        <ul>
+          <li>EV architecture & components</li>
+          <li>Motor & controller systems</li>
+          <li>EV wiring & diagnostics</li>
+          <li>Vehicle assembly & servicing</li>
+          <li>Charging systems & maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="course-card">
+        <img src="assets/images/GALLERY/training2.jpeg" alt="Advanced Battery Course">
+        <h3>Advanced Battery Course in Mumbai</h3>
+        <ul>
+          <li>Lithium-ion battery pack design</li>
+          <li>Cell testing & grading</li>
+          <li>Battery assembly & repair</li>
+          <li>Thermal management</li>
+          <li>Battery fault detection</li>
+        </ul>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="course-card">
+        <img src="assets/images/GALLERY/training3.jpeg" alt="BMS Course">
+        <h3>BMS Course in Mumbai</h3>
+        <ul>
+          <li>BMS fundamentals & protection systems</li>
+          <li>Wiring & battery pack integration</li>
+          <li>Programming & live testing</li>
+          <li>Diagnostics & troubleshooting</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Practical Training -->
+    <div class="practical-box">
+      <div class="practical-content">
+        <h3>EV Training in Mumbai – Practical Modules</h3>
+        <p>Students receive hands-on training on:</p>
+        <ul class="practical-list">
+          <li>Electric 2W, 3W & 4W systems</li>
+          <li>Battery dismantling & rebuilding</li>
+          <li>BMS testing setups</li>
+          <li>Motor controller diagnostics</li>
+          <li>EV safety & maintenance</li>
+          <li>Charging infrastructure</li>
+        </ul>
+        <p class="highlight-text">
+          This is <strong>not classroom theory</strong> - this is
+          <strong>live industrial Electric Vehicle Training in Mumbai</strong>.
+        </p>
+      </div>
+      <div class="practical-image">
+        <img src="assets/images/GALLERY/training4.jpeg" alt="EV Practical Training">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HERO -->
+<section class="hero">
+<div class="content">
+<h1>Skill Coach Mumbai – Learn from India’s Leading EV Experts</h1>
+<p>The centre is operated by EVRobotics Skill Coach India, known for training professionals from Tata, Mahindra, Bajaj, Toyota, Volkswagen and many more. Students learn directly from experienced EV trainers with real-world industry exposure.</p>
+<!-- <p>Advanced Electric Vehicle Courses inside Don Bosco ITI Campus</p>
+<a href="#admission" class="btn">Apply for 2026 Batch</a> -->
+</div>
+</section>
+
+
+
+<section class="evm-training">
+  <div class="content">
+    <!-- Practical Training -->
+    <div class="practical-box">
+        <div class="practical-image">
+        <img src="assets/images/GALLERY/training5.jpeg" alt="EV Practical Training">
+      </div>
+      <div class="practical-content">
+        <h3>E-Mobility Centre of Excellence – Lab Facilities</h3>
+        <!-- <p>Students receive hands-on training on:</p> -->
+        <ul class="practical-list">
+          <li>Live EV vehicle models</li>
+          <li>Battery Pack Assembly Lab</li>
+          <li>BMS Programming & Testing Zone</li>
+          <li>EV Motor & Controller Panels</li>
+          <li>Charging Station Demonstration</li>
+          <li>Diagnostic Tools & Equipment</li>
+        </ul>
+        <p class="highlight-text">
+         Mumbai’s most advanced EV practical lab inside an ITI environment.
+        </p>
+      </div>
+      
+    </div>
+
+
+    <div class="practical-box">
+        
+      <div class="practical-content">
+        <h3>Career Opportunities After EV Course</h3>
+        <p>After completing the Electric Vehicle Training, students can work as:</p>
+        <ul class="practical-list">
+          <li>EV Technician</li>
+          <li>Battery Repair Specialist</li>
+          <li>BMS Technician</li>
+          <li>EV Service Engineer</li>
+          <li>EV Workshop Owner</li>
+          <li>EV Startup Entrepreneur</li>
+        </ul>
+        <!-- <p class="highlight-text">
+         Mumbai’s most advanced EV practical lab inside an ITI environment.
+        </p> -->
+      </div>
+
+      <div class="practical-image">
+        <img src="assets/images/GALLERY/training6.jpeg" alt="EV Practical Training">
+      </div>
+      
+    </div>
+
+    
+
+    </div>
+</section>
+
+
+
+
+
+
+<!-- ADMISSION -->
+<section class="admission-modern" id="admission">
+    <div class="admission-box">
+
+        <span class="badge">Admissions 2026</span>
+
+        <h2>Admissions Open for <span>2026 Batch</span></h2>
+        <p class="subtitle">Join industry-ready Electric Vehicle programs in Mumbai</p>
+
+        <div class="course-tags">
+            <span>Electric Vehicle Course in Mumbai</span>
+            <span>EV Technician Course</span>
+            <span>Battery Course in Mumbai</span>
+            <span>BMS Course in Mumbai</span>
+            <span>Professional EV Training Programs</span>
+        </div>
+
+        <div class="info-box">
+            <p><strong>Limited Seats Available</strong><br>
+            Under the <b>E-Mobility Centre of Excellence</b></p>
+        </div>
+
+        <h4>📍 Location</h4>
+        <p class="location">
+            E-Mobility Centre of Excellence,<br>
+            Don Bosco ITI, Mumbai
+        </p>
+
+        <p class="trust">Trusted campus • India’s best EV training ecosystem</p>
+
+        <!-- Optional Button -->
+        <!-- <a href="#" class="btn-enroll">Enroll Now</a> -->
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section class="apply-section">
+    <div class="col-lg-10 col-xl-10">
+      <h2 class="apply-title">How to Apply <br><br></h2>
+<div class="main-container">
+  <!-- Left Form Section -->
+  <div class="left-section">
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <p class="subtext">Have questions or need assistance? Reach out and our team will respond within 2 hours.</p>
+
+      <div class="name-fields">
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+      </div>
+
+      <input type="text" placeholder="Email" />
+      <input type="email" placeholder="Phone no." />
+      <!-- <input type="tel" placeholder="+1 (555) 000-0000" /> -->
+
+      <textarea placeholder="Message" rows="5"></textarea>
+
+      <button type="submit">Send a message</button>
+    </form>
+  </div>
+
+  <!-- Right Image Section -->
+  <div class="right-section" style="background-image: url(assets/images/GALLERY/G\ 24.jpg);">
+    <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(4px); border-radius: 12px; padding: 20px; max-width: 400px; margin: auto; text-align: center; color: #fff;">
+
+  <h3 style="font-size: 1.2rem; margin-bottom: 10px;">
+    <span style="font-weight: 600; color: white;">EVRobotics Skill Coach (India) Pvt. Ltd.</span>
+  </h3>
+
+  <div style="font-size: 2.5rem; font-weight: bold;">5.0</div>
+
+  <div style="font-size: 1.5rem; color: #fbbc04; margin-bottom: 5px; transition: transform 0.3s;"
+       onmouseover="this.style.transform='scale(1.2)'"
+       onmouseout="this.style.transform='scale(1)'">
+    ⭐⭐⭐⭐⭐
+  </div>
+
+  <p style="font-size: 0.9rem;">Based on Google Reviews</p>
+
+  <div style="margin-top: 20px; text-align: left;">
+    <div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">5</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 100%; height: 8px; background: #fbbc04; border-radius: 5px;"></div>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">4</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 0%; height: 8px; background: #fbbc04; border-radius: 5px;"></div> 
+      </div>
+    </div>
+	<div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">3</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 0%; height: 8px; background: #fbbc04; border-radius: 5px;"></div> 
+      </div>
+    </div>
+	<div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">2</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 0%; height: 8px; background: #fbbc04; border-radius: 5px;"></div> 
+      </div>
+    </div>
+	<div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">1</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 0%; height: 8px; background: #fbbc04; border-radius: 5px;"></div> 
+      </div>
+    </div>
+	<div style="display: flex; align-items: center; margin-bottom: 6px;">
+      <span style="width: 15px;">0</span>
+      <div style="flex: 1; margin: 0 10px; background: rgba(255,255,255,0.3); border-radius: 5px;">
+        <div style="width: 0%; height: 8px; background: #fbbc04; border-radius: 5px;"></div> 
+      </div>
+    </div><br>
+	    <!-- <p style="font-size: 1rem;">
+      Rated 5 Stars on Google by 1000+ Happy Learners
+    </p> -->
+     <p style="font-size: 0.95rem; text-align: center;">
+      Trusted for Practical EV, Robotics & Automation Training in India.
+    </p>
+	
+   
+    <!-- You can add 3, 2, 1 here if desired -->
+</div>
+<a href="https://www.google.com/maps/place/EVRobotics+Skill+Coach+(India)+Pvt.Ltd-Pune/@18.5189326,73.8159104,17z/data=!4m16!1m9!3m8!1s0x3bc2bf52a52c2519:0xeb71619960f49314!2sEVRobotics+Skill+Coach+(India)+Pvt.Ltd-Pune!8m2!3d18.5189326!4d73.8159104!9m1!1b1!16s%2Fg%2F11xlb7hzxc!3m5!1s0x3bc2bf52a52c2519:0xeb71619960f49314!8m2!3d18.5189326!4d73.8159104!16s%2Fg%2F11xlb7hzxc?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" 
+   target="_blank" 
+   style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #14141458; color: #fff; border: 1px solid rgba(255,255,255,0.4); border-radius: 6px; text-decoration: none; font-weight: 500; transition: all 0.3s;">
+   ⭐ Review us on Google
+</a>
+
+  
+
+</div>
+
+</div>
+
+    </div></div>
+  </section>
+
+<!-- =======================
+Testimonials END -->
+
+<!-- =======================
+
+
+Faqs START -->
+
+
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+
+<!-- Footer START --> 
+<footer class="">
+		<div class="container position-relative mt-sm-5">
+
+
+
+			<!-- Divider -->
+			<hr class="my-5">
+
+			<!-- Footer Widgets -->
+			<div class="row g-4">
+
+    <!-- Links -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+        <h6 class="mb-3">Links</h6>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./about.html">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./course.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+
+    <!-- Services -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <h6 class="mb-3">Our Services</h6>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link pt-0" href="./course.html">Electric Vehicles (EV)</a></li>
+            <li class="nav-item"><a class="nav-link" href="./course.html">Industrial Automation</a></li>
+            <li class="nav-item"><a class="nav-link" href="./course.html">Robotics</a></li>
+            <li class="nav-item"><a class="nav-link" href="./course.html">Design & Manufacturing Tools</a></li>
+            <li class="nav-item"><a class="nav-link" href="./course.html">AI & ML</a></li>
+        </ul>
+    </div>
+
+    <!-- Mumbai -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <h6 class="mb-3">Mumbai Address</h6>
+        <p class="mb-2">
+            <i class="bi bi-geo-alt text-danger"></i>
+            Shop No.116, Lodha shopping center, Lodha Casa Rio Gold Rd, above Unity Bank, Maduban Society, Dombivli East, Nilje Gaon, Maharashtra 421204
+        </p>
+        <p>
+            <i class="bi bi-telephone text-danger"></i>
+            9990634057
+        </p>
+    </div>
+
+	 <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+        <h6 class="mb-3">Mumbai Address</h6>
+        <p class="mb-2">
+            <i class="bi bi-geo-alt text-danger"></i>
+            Skill coach  E-Mobility Centre of Excellence 
+Don Bosco ITI Centre for Learning
+Premier Automobiles Road, Vidyavihar (W), 
+Mumbai 400 070
+        </p>
+        <!-- <p>
+            <i class="bi bi-telephone text-danger"></i>
+            9137419684
+        </p> -->
+    </div>
+
+    <!-- Pune -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+        <h6 class="mb-3">Pune Address</h6>
+        <p class="mb-2">
+            <i class="bi bi-geo-alt text-danger"></i>
+            MIT ,WPU Department of Polytechnic Vishwashanti Marg, Rambaug Colony, Kothrud, Pune, Maharashtra 411038
+        </p>
+        <p>
+            <i class="bi bi-telephone text-danger"></i>
+            9137419684
+        </p>
+    </div>
+
+    <!-- Pune 2 -->
+   
+
+</div>
+
+
+			<!-- Divider -->
+			<hr class="mt-4 mb-3">
+
+			<!-- Bottom footer -->
+			<!-- <div class="d-md-flex justify-content-between align-items-center text-center text-lg-start py-3"> -->
+
+
+				<!-- Copyright link-->
+				<div style="text-align:center;"> Copyrights ©2025 EVRobotics Skill Coach (India) Pvt. Ltd. | Design by 
+					<a href="https://www.netcom-india.com/" class="text-body text-primary-hover">Netcom Business
+						Solutions Pvt. Ltd.</a>
+				</div>
+				<!-- Copyright link-->
+			</div>
+		<!-- </div> -->
+	</footer>
+	<!-- =======================
+Footer END -->
+
+<!-- Back to top -->
+<div class="back-top"></div>
+
+<!-- Bootstrap JS -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<!--Vendors-->
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<!-- Theme Functions -->
+<script src="assets/js/functions.js"></script>
+
+</body>
+
+</html>
